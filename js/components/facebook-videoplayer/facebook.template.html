@@ -1,0 +1,12 @@
+
+<div class="video-header">
+    <div class="video-header__title">
+        {{$ctrl.title ? $ctrl.title : 'No Title'}}
+    </div>
+    <div class="video-header__viewCounts">
+        {{$ctrl.viewCounts? $ctrl.viewCounts : 'No Views'}}
+    </div>
+</div>
+<div class="video-content">
+    <iframe ng-src="{{getIframeSrc($ctrl.videoId)}}" width="420" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+</div>

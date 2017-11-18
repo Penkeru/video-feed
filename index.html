@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en" data-framework="angularjs">
+	<head>
+		<meta charset="utf-8">
+
+		<link rel="stylesheet" href="css/style.css">
+
+
+		<style>[ng-cloak] { display: none; }</style>
+	</head>
+	<body ng-app="videoFeed">
+		<header>
+            <section class="header__nav-bar">
+                <div class="nav-bar__title">
+                    <div class="nav-bar__title__text">
+                        Video Feed
+                    </div>
+                </div>
+            </section>
+        </header>
+        <ng-view />
+
+        <footer>
+
+        </footer>
+
+		<script src="node_modules/angular/angular.js"></script>
+		<script src="node_modules/angular-route/angular-route.js"></script>
+        <script src="node_modules/angular-resource/angular-resource.js"></script>
+        <script src="node_modules/angular-messages/angular-messages.js"></script>
+		<script src="js/app.js"></script>
+		<script src="js/controllers/videoFeedCtrl.js"></script>
+		<script src="js/services/videoFeedStorage.js"></script>
+		<script src="js/components/youtube-videoplayer/youtube.controller.js"></script>
+		<script src="js/components/facebook-videoplayer/facebook.controller.js"></script>
+		<script src="js/components/videoplayer/video.controller.js"></script>
+	</body>
+</html>

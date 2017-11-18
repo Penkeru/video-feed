@@ -1,0 +1,14 @@
+<div class="video-feed__container">
+    <div class="video-container" ng-repeat="videoElement in videoSettings">
+        <div ng-if="videoElement.videoId">
+            <youtube-video ng-if="videoElement.source === 'youtube'" title="videoElement.title" view-counts="videoElement.views" video-id="videoElement.videoId"></youtube-video>
+            <video-player ng-if="videoElement.source === 'url'" title="videoElement.title" view-counts="videoElement.views" video-id="videoElement.videoId"></video-player>
+            <facebook-video ng-if="videoElement.source === 'facebook'" title="videoElement.title" view-counts="videoElement.views" video-id="videoElement.videoId"></facebook-video>
+        </div>
+        <div class="video-container__empty" ng-if="!videoElement.videoId">
+            {{videoElement.source}} video is not available
+        </div>
+    </div>
+</div>
+
+
